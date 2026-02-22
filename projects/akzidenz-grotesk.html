@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akzidenz-Grotesk Type Specimen - Dustin Braufman</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hjw6gzp.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../flipbook.css">
+</head>
+<body>
+    <nav class="work-nav">
+        <img src="../site images/logogogo.png" alt="Dustin Braufman" class="logo-image" id="hamburger-trigger">
+        <div class="hamburger-icon" id="hamburger-icon-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <button class="hamburger-close" id="hamburger-close">&times;</button>
+        <div class="hamburger-content">
+            <a href="../index.html" class="hamburger-link">Home</a>
+            <a href="../work.html" class="hamburger-link">Work</a>
+            <a href="../about.html" class="hamburger-link">About</a>
+        </div>
+    </div>
+
+    <main class="project-detail">
+        <h1 class="project-detail-title">Akzidenz-Grotesk Type Specimen</h1>
+
+        <div class="flipbook-summary">
+            <div class="text-content">
+                <h3>Project Overview</h3>
+                <p>Type specimen book designed for the legendary typeface Akzidenz-Grotesk. Includes designs, history, and three use cases.</p>
+            </div>
+        </div>
+
+        <div class="flipbook-container">
+            <button class="flipbook-arrow flipbook-prev" id="flipbook-prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div id="flipbook">
+                <!-- Add your page images here -->
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz bookpngs.png" alt="Page 1"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book2.png" alt="Page 2"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book3.png" alt="Page 3"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book4.png" alt="Page 4"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book5.png" alt="Page 5"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book6.png" alt="Page 6"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book7.png" alt="Page 7"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book8.png" alt="Page 8"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book9.png" alt="Page 9"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book10.png" alt="Page 10"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book11.png" alt="Page 11"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book12.png" alt="Page 12"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book13.png" alt="Page 13"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book14.png" alt="Page 14"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz book15.png" alt="Page 15"></div>
+                <div class="flipbook-page"><img src="../akzidenz/akzidenz bookpngslast.png" alt="Page 16"></div>
+            </div>
+            <button class="flipbook-arrow flipbook-next" id="flipbook-next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 6 15 12 9 18"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="flipbook-page-indicator" id="page-indicator"></div>
+    </main>
+
+    <script src="../hamburger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+    <script src="../flipbook.js"></script>
+</body>
+</html>

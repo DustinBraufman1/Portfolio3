@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork - Dustin Braufman</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hjw6gzp.css">
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <nav class="work-nav">
+        <img src="../site images/logogogo.png" alt="Dustin Braufman" class="logo-image" id="hamburger-trigger">
+        <div class="hamburger-icon" id="hamburger-icon-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <button class="hamburger-close" id="hamburger-close">&times;</button>
+        <div class="hamburger-content">
+            <a href="../index.html" class="hamburger-link">Home</a>
+            <a href="../work.html" class="hamburger-link">Work</a>
+            <a href="../about.html" class="hamburger-link">About</a>
+        </div>
+    </div>
+
+    <main class="project-detail">
+        <h1 class="project-detail-title">Classwork</h1>
+
+        <div class="project-grid">
+            <!-- Full-width image -->
+            <div class="grid-item full-width">
+                <img src="../project images/placeholder.jpg" alt="Project image" class="project-img">
+            </div>
+
+            <!-- Text and image side by side -->
+            <div class="grid-item">
+                <div class="text-content">
+                    <h3>Project Overview</h3>
+                    <p>Add your project description here.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../project images/placeholder.jpg" alt="Project image" class="project-img size-medium">
+            </div>
+
+            <!-- Two images side by side -->
+            <div class="grid-item">
+                <img src="../project images/placeholder.jpg" alt="Project image" class="project-img size-small">
+            </div>
+            <div class="grid-item">
+                <img src="../project images/placeholder.jpg" alt="Project image" class="project-img size-small">
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Enlarged image" class="lightbox-image" id="lightbox-img">
+        <div class="lightbox-caption"><p class="lightbox-blurb" id="lightbox-blurb"></p><span class="lightbox-hint">Click to zoom • ESC to close</span></div>
+    </div>
+
+    <script src="../hamburger.js"></script>
+    <script src="../lightbox.js"></script>
+</body>
+</html>
