@@ -238,7 +238,7 @@ body {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color: var(--bg-color);
     transition: width 0.3s ease;
 }
