@@ -342,6 +342,7 @@ body {
     font-size: 36px;
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 /* 2-Column Grid System */
@@ -349,7 +350,11 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    align-items: center;
+    align-items: start;
+}
+
+.project-grid .grid-item:has(img) {
+    align-self: center;
 }
 
 .grid-item {
@@ -406,7 +411,7 @@ body {
     font-family: var(--font-title);
     font-weight: 700;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .text-content p {
@@ -452,6 +457,7 @@ body {
     font-size: 36px;
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .about-layout {
