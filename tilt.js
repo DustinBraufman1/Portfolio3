@@ -36,6 +36,13 @@ items.forEach(item => {
     setups.push(setup);
     window.addEventListener('resize', setup);
 
+    // For dynamically-added thumbnails (morework.js), the image may not be
+    // loaded when window.load fires, so re-run setup when it does load.
+    const img = thumb.querySelector('img');
+    if (img && !img.complete) {
+        img.addEventListener('load', setup);
+    }
+
     item.addEventListener('mouseenter', () => {
         rect.style.strokeDashoffset = '0';
     });
