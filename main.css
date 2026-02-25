@@ -522,6 +522,35 @@ body {
     width: 100%;
 }
 
+.view-site-link {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    position: relative;
+    width: fit-content;
+}
+
+.view-site-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+.view-site-link:hover::after {
+    width: 100%;
+}
+
 /* More Work Section */
 .more-work-section {
     border-top: 2px solid black;
