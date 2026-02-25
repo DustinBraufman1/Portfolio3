@@ -572,15 +572,14 @@ body {
 }
 
 .more-work-section .work-grid {
-    grid-template-columns: repeat(3, minmax(0, 320px));
-    width: fit-content;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .name-title {
         font-size: 32px;
+        
     }
 
     .nav-buttons {
@@ -597,18 +596,19 @@ body {
         padding: 100px 25px 40px;
     }
 
-    .work-grid {
+    .work-grid,
+    .more-work-section .work-grid {
         grid-template-columns: 1fr;
         gap: 60px;
     }
 
     .project-detail {
-        padding: 100px 25px 40px;
+        padding: 120px 25px 40px;
     }
 
     .project-detail-title {
         font-size: 28px;
-        margin-bottom: 40px;
+        margin-top: 30px;
     }
 
     /* Stack grid to single column on mobile */
