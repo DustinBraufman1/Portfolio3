@@ -357,7 +357,9 @@ body {
     align-items: start;
 }
 
-.project-grid .grid-item:has(img) {
+.project-grid .grid-item:has(img),
+.project-grid .grid-item:has(.text-content),
+.project-grid .grid-item:has(.right-text-content) {
     align-self: center;
 }
 
