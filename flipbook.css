@@ -14,6 +14,7 @@
 
 #flipbook {
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .flipbook-page {
@@ -49,4 +50,22 @@
     font-family: var(--font-body);
     font-size: 14px;
     color: #999;
+}
+
+@media (max-width: 768px) {
+    .flipbook-container {
+        /* Break out of project-detail's 25px side padding to use full viewport width */
+        width: calc(100vw - 16px);
+        margin-left: calc(-25px + 8px);
+        gap: 4px;
+    }
+
+    .flipbook-arrow {
+        padding: 4px;
+    }
+
+    .flipbook-arrow svg {
+        width: 16px;
+        height: 16px;
+    }
 }
