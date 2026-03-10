@@ -5,9 +5,13 @@ const hamburgerMenu = document.getElementById('hamburger-menu');
 const hamburgerIconTrigger = document.getElementById('hamburger-icon-trigger');
 const hamburgerClose = document.getElementById('hamburger-close');
 
-// Toggle menu when logo is clicked
+// Toggle menu when logo is clicked (navigate to work page if on a project page)
 hamburgerTrigger.addEventListener('click', () => {
-    hamburgerMenu.classList.toggle('active');
+    if (location.pathname.includes('/projects/')) {
+        location.href = '../work.html';
+    } else {
+        hamburgerMenu.classList.toggle('active');
+    }
 });
 
 // Toggle menu when hamburger icon is clicked
