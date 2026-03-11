@@ -38,6 +38,14 @@ const ALL_PROJECTS = [
         year: '2024',
         img: '../project images/jfed.png',
         imgClass: 'thumbnail-img'
+    },
+    {
+        slug: 'classwork',
+        href: 'classwork.html',
+        title: 'Classwork',
+        year: '2024',
+        img: '../project images/largebgroundedited.png',
+        imgClass: 'thumbnail-img'
     }
 ];
 
