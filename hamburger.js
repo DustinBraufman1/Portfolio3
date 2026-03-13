@@ -37,3 +37,19 @@ document.addEventListener('keydown', (e) => {
         hamburgerMenu.classList.remove('active');
     }
 });
+
+// On touch devices, play underline animation before navigating
+const isTouch = () => window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+document.querySelectorAll('.hamburger-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        if (!isTouch()) return;
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        if (!href) return;
+        link.classList.add('touch-active');
+        setTimeout(() => {
+            window.location.href = href;
+        }, 350);
+    });
+});

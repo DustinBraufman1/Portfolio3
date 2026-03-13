@@ -50,6 +50,20 @@ items.forEach(item => {
     item.addEventListener('mouseleave', () => {
         rect.style.strokeDashoffset = thumb._perimeter;
     });
+
+    item.addEventListener('click', (e) => {
+        const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+        if (!isTouch) return;
+
+        const href = item.getAttribute('href');
+        if (!href) return;
+
+        e.preventDefault();
+        rect.style.strokeDashoffset = '0';
+        setTimeout(() => {
+            window.location.href = href;
+        }, 650);
+    });
 });
 
 // Run setup after everything (including images) is fully loaded

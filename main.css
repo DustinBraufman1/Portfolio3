@@ -95,7 +95,8 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-btn:hover::after {
+.nav-btn:hover::after,
+.nav-btn.touch-active::after {
     width: 100%;
 }
 
@@ -249,7 +250,8 @@ body {
     opacity: 0.7;
 }
 
-.hamburger-link:hover::after {
+.hamburger-link:hover::after,
+.hamburger-link.touch-active::after {
     width: 100%;
 }
 
