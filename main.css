@@ -413,6 +413,13 @@ body {
     max-height: 900px;
 }
 
+/* Full: natural image dimensions, no cropping */
+.project-img.size-full {
+    object-fit: contain;
+    height: auto;
+    max-height: 600px;
+}
+
 /* Text content styling */
 .text-content {
     font-family: var(--font-body);
