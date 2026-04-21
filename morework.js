@@ -40,11 +40,11 @@ const ALL_PROJECTS = [
         imgClass: 'thumbnail-img'
     },
     {
-        slug: 'classwork',
-        href: 'classwork.html',
-        title: 'Classwork',
-        year: '2024',
-        img: '../project images/largebgroundedited.png',
+        slug: 'KS-Ranch',
+        href: 'KS-Ranch.html',
+        title: 'Kash Soowal Ranch',
+        year: '2026',
+        img: '../project images/nobground.png',
         imgClass: 'thumbnail-img'
     }
 ];
