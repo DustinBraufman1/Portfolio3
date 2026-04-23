@@ -52,11 +52,9 @@
 
             <!-- Example: Image on left, text on right -->
             <div class="grid-item">
-                <div class="video-crop">
-                    <video autoplay muted loop playsinline>
-                        <source src="../project images/computer.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <video autoplay muted loop playsinline class="project-img project-video" data-caption="Bella Vista Bank email campaign mockup.">
+                    <source src="../project images/computer_1.mp4" type="video/mp4">
+                </video>
             </div>
             
 
@@ -79,6 +77,7 @@
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close">&times;</span>
         <img src="" alt="Enlarged image" class="lightbox-image" id="lightbox-img">
+        <video class="lightbox-image" id="lightbox-video" autoplay muted loop playsinline style="display:none;"></video>
         <div class="lightbox-caption"><p class="lightbox-blurb" id="lightbox-blurb"></p><span class="lightbox-hint">Click to zoom • ESC to close</span></div>
     </div>
 
