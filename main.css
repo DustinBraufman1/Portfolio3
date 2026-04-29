@@ -365,6 +365,7 @@ body {
 }
 
 .project-grid .grid-item:has(img),
+.project-grid .grid-item:has(video),
 .project-grid .grid-item:has(.text-content),
 .project-grid .grid-item:has(.right-text-content) {
     align-self: center;
@@ -413,10 +414,19 @@ body {
     max-height: 900px;
 }
 
+.video-wrap {
+    overflow: hidden;
+    background: var(--bg-color);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
 .project-video {
     width: 100%;
     height: auto;
     display: block;
+    border: none;
+    transform: translateZ(0) scale(1.01);
 }
 
 /* Full: natural image dimensions, no cropping */
