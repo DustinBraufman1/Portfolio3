@@ -7,10 +7,11 @@ const lightboxBlurb = document.getElementById('lightbox-blurb');
 let isZoomed = false;
 
 // Get all project images and videos
-const projectImages = document.querySelectorAll('.project-img');
+const projectImages = document.querySelectorAll('.project-img, .project-video');
 
 // Add click event to all project images/videos
 projectImages.forEach(el => {
+    el.style.cursor = 'pointer';
     el.addEventListener('click', () => {
         if (el.tagName === 'VIDEO') {
             openLightboxVideo(el.querySelector('source').src, el.dataset.caption || '');

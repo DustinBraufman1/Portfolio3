@@ -1,5 +1,13 @@
 const ALL_PROJECTS = [
     {
+        slug: 'Bellla-Vista-Bank',
+        href: 'Bellla-Vista-Bank.html',
+        title: 'Bella Vista Bank',
+        year: '2025',
+        img: '../project images/Asset 5@bellavistalogo.png',
+        imgClass: 'thumbnail-img thumb-scale-80'
+    },
+    {
         slug: 'naturday',
         href: 'naturday.html',
         title: 'Naturday Rebrand',

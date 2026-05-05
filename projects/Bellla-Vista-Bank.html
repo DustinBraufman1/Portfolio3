@@ -35,36 +35,49 @@
             <!-- Example: Full-width image -->
             
             <div class="grid-item full-width">
-                <div class="grid-item">
-                    <img src="../project images/Sequence 01_1.mp4" alt="Project image" class="project-img size-full" data-caption="Bella Vista Bank brandkit. ">
-                </div>
+                <video autoplay muted loop playsinline class="project-video">
+                    <source src="../project images/vibeo.mp4" type="video/mp4">
+                </video>
             </div>
             <!-- Example: Two column layout with text and image -->
             
+            <div class="grid-item full-width">
+                <p>Website mockup displaying the process of creating an account for the bank. Explore the site mockup <a href="https://dustinbraufman1.github.io/bellavistabank" class="inline-link" target="_blank" rel="noopener">here</a>.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../project images/bvlogothing.png" alt="Project image" class="project-img size-large" data-caption="Primary Logo.">
+            </div>
+
             <div class="grid-item">
                 <div class="text-content">
                     <h3>Project Overview</h3>
-                    <p>Client wanted an emblem logo for their ranch, named "Kash Soowal Ranch".
-                        Designed the logo based on the client's desired creative direction, western yet modern.
-</p>
-                        <p>Created an alternate wordmark logo afterwards using some of the elements from the primary logo to not lose brand value.</p>
+                    <p>In-class project creating a brand identity for a fictional bank. Designed assets across multiple media in order to create a realistic online presence for Bella Vista Bank.</p>
                 </div>
             </div>
             
 
             <!-- Example: Image on left, text on right -->
-            <div class="grid-item video-wrap">
-                <video autoplay muted loop playsinline class="project-img project-video" data-caption="Bella Vista Bank email campaign mockup.">
+            
+            <div class="grid-item">
+                <div class="text-content">
+                    <h3>Design Process</h3>
+                    <p> Began with designing the logo then built the brand kit to help lead the direction of the following materials. Designed physical materials within the larger digital pieces to contribute to a full brand visualization. </p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img src="../project images/brandkilt.png" alt="Project image" class="project-img size-full" data-caption="Bella Vista Bank brand kit.">
+            </div>
+
+
+            <div class="grid-item full-width">
+                <video autoplay muted loop playsinline class="project-video">
                     <source src="../project images/computer_1.mp4" type="video/mp4">
                 </video>
             </div>
             
-
-            <div class="grid-item">
-                <img src="../project images/ksalternatelogo.png" alt="Project image" class="project-img size-large" data-caption="Secondary wordmark logo.">
-            </div>
-
-            
+        
         </div>
     </main>
 
@@ -75,8 +88,8 @@
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close">&times;</span>
         <img src="" alt="Enlarged image" class="lightbox-image" id="lightbox-img">
-        <video class="lightbox-image" id="lightbox-video" autoplay muted loop playsinline style="display:none;"></video>
-        <div class="lightbox-caption"><p class="lightbox-blurb" id="lightbox-blurb"></p><span class="lightbox-hint">Click to zoom • ESC to close</span></div>
+        <video class="lightbox-image" id="lightbox-video" autoplay muted controls playsinline style="display:none;"></video>
+        <div class="lightbox-caption"><p class="lightbox-blurb" id="lightbox-blurb"></p><span class="lightbox-hint">ESC to close</span></div>
     </div>
 
     <script src="../morework.js"></script>
