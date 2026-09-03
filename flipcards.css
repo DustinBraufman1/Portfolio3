@@ -1,10 +1,23 @@
 .flipcard-row {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(4, 200px);
     gap: 50px 90px;
     justify-content: center;
     align-items: center;
     padding: 50px 80px;
+}
+
+@media (max-width: 1310px) {
+    .flipcard-row {
+        grid-template-columns: repeat(2, 200px);
+    }
+}
+
+@media (max-width: 700px) {
+    .flipcard-row {
+        grid-template-columns: 1fr;
+        padding: 50px 25px;
+    }
 }
 
 @keyframes float {

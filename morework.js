@@ -40,14 +40,6 @@ const ALL_PROJECTS = [
         imgClass: 'thumbnail-img'
     },
     {
-        slug: 'jewish-federation',
-        href: 'jewish-federation.html',
-        title: 'Jewish Federation of Greater Philadelphia',
-        year: '2024',
-        img: '../project images/jfed.png',
-        imgClass: 'thumbnail-img'
-    },
-    {
         slug: 'KS-Ranch',
         href: 'KS-Ranch.html',
         title: 'Kash Soowal Ranch',

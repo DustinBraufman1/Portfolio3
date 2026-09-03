@@ -340,6 +340,24 @@ body {
     margin-top: -4px;
 }
 
+.work-meta {
+    width: 90%;
+    margin: -4px auto 0;
+}
+
+.work-meta .work-year {
+    display: inline;
+    width: auto;
+    margin: 0;
+}
+
+.work-type {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 14px;
+    color: #999;
+}
+
 /* Project Detail Page */
 .project-detail {
     padding: 120px 40px 60px;
