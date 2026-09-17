@@ -312,6 +312,9 @@ body {
 .thumbnail-img.thumb-scale-60 { width: 60%; height: 60%; object-fit: contain; }
 .thumbnail-img.thumb-scale-50 { width: 50%; height: 50%; object-fit: contain; }
 .thumbnail-img.thumb-scale-120 { width: 120%; height: 120%; object-fit: contain; }
+.thumbnail-img.thumb-scale-105 { width: 105%; height: 105%; object-fit: contain; }
+.thumbnail-img.thumb-scale-66 { width: 66%; height: 66%; object-fit: contain; }
+.thumbnail-img.thumb-scale-63 { width: 63%; height: 63%; object-fit: contain; }
 
 .project-placeholder {
     font-size: 14px;
