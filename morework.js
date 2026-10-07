@@ -23,14 +23,14 @@ const ALL_PROJECTS = [
         img: '../project images/Silvi-Materials-slate-yellow-Transparent.png',
         imgClass: 'thumbnail-img thumb-scale-70'
     },
-    /* {
+    {
         slug: 'mako-exterior',
         href: 'mako-exterior.html',
         title: 'Mako Website',
         year: '2024',
         img: '../project images/logo copy.jpg',
         imgClass: 'thumbnail-img thumb-scale-80'
-    }, */
+    },
     {
         slug: 'akzidenz-grotesk',
         href: 'akzidenz-grotesk.html',
