@@ -73,7 +73,7 @@
             </div>
 
             <div class="grid-item">
-                <video autoplay muted loop playsinline class="project-video" style="max-width: 60%; margin: 0 auto;">
+                <video id="kiosk-video" autoplay muted loop playsinline class="project-video" style="max-width: 60%; margin: 0 auto; display: block;" data-caption="LinkNYC kiosk animation.">
                     <source src="../project images/gmmb-clip.mp4" type="video/mp4">
                 </video>
             </div>
@@ -85,7 +85,7 @@
                         When a project needed multiple deliverables, I made sure they all shared the same visual language so they landed as one message.
                     </p>
                     <p>
-                        To the left is an animation I designed that showed on LinkNYC kiosks around New York City. I designed multiple accompanying Meta advertisements using the same branding.
+                        To the left is an animation I designed that showed on LinkNYC kiosks around New York City. I designed multiple accompanying Meta advertisements using the same branding, view one by clicking on the kiosk animation and navigating to it.
                     </p>
                 </div>
             </div>
@@ -99,6 +99,11 @@
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close">&times;</span>
         <img src="" alt="Enlarged image" class="lightbox-image" id="lightbox-img">
+        <video class="lightbox-image" id="lightbox-video" autoplay muted loop playsinline style="display:none;"></video>
+        <div id="lightbox-kiosk-thumbs" style="display:none; position:absolute; bottom:76px; left:0; right:0; justify-content:center; gap:12px; z-index: 1;">
+            <img id="lightbox-thumb-kiosk" src="../project images/kiosk-thumb.jpg" alt="Kiosk video thumbnail" title="View the kiosk video" style="width:60px; height:60px; object-fit:cover; cursor:pointer; outline:2px solid #fff; outline-offset:2px;">
+            <img id="lightbox-thumb-amazon" src="../project images/amazonadd.png" alt="Meta ad thumbnail" title="View the accompanying Meta ad" style="width:60px; height:60px; object-fit:cover; cursor:pointer; outline:2px solid transparent; outline-offset:2px;">
+        </div>
         <div class="lightbox-caption"><p class="lightbox-blurb" id="lightbox-blurb"></p><span class="lightbox-hint">Click to zoom • ESC to close</span></div>
     </div>
 
@@ -106,5 +111,57 @@
     <script src="../tilt.js"></script>
     <script src="../hamburger.js"></script>
     <script src="../lightbox.js"></script>
+    <script>
+        (function () {
+            const kioskVideoEl = document.getElementById('kiosk-video');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxClose = document.querySelector('.lightbox-close');
+            const thumbsRow = document.getElementById('lightbox-kiosk-thumbs');
+            const thumbKiosk = document.getElementById('lightbox-thumb-kiosk');
+            const thumbAmazon = document.getElementById('lightbox-thumb-amazon');
+            if (!kioskVideoEl || !lightbox || !thumbsRow || !thumbKiosk || !thumbAmazon) return;
+
+            const kiosk = { src: '../project images/gmmb-clip.mp4', caption: 'LinkNYC kiosk animation.' };
+            const amazon = { src: '../project images/amazonadd.png', alt: 'Project image', caption: 'Accompanying Meta ad.' };
+
+            function highlight(which) {
+                thumbKiosk.style.outlineColor = which === 'kiosk' ? '#fff' : 'transparent';
+                thumbAmazon.style.outlineColor = which === 'amazon' ? '#fff' : 'transparent';
+            }
+
+            function showThumbs(which) {
+                thumbsRow.style.display = 'flex';
+                highlight(which);
+            }
+
+            function hideThumbs() {
+                thumbsRow.style.display = 'none';
+            }
+
+            // Show the thumbnail switcher only when the kiosk video is the one opened
+            kioskVideoEl.addEventListener('click', () => showThumbs('kiosk'));
+
+            // Any other project image/video hides the switcher
+            document.querySelectorAll('.project-img, .project-video').forEach(el => {
+                if (el !== kioskVideoEl) {
+                    el.addEventListener('click', hideThumbs);
+                }
+            });
+
+            thumbKiosk.addEventListener('click', () => {
+                window.openLightboxVideo ? window.openLightboxVideo(kiosk.src, kiosk.caption) : null;
+                showThumbs('kiosk');
+            });
+
+            thumbAmazon.addEventListener('click', () => {
+                window.openLightbox ? window.openLightbox(amazon.src, amazon.alt, amazon.caption) : null;
+                showThumbs('amazon');
+            });
+
+            lightboxClose && lightboxClose.addEventListener('click', hideThumbs);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) hideThumbs(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideThumbs(); });
+        })();
+    </script>
 </body>
 </html>
